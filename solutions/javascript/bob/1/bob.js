@@ -1,0 +1,25 @@
+//
+// This is only a SKELETON file for the 'Bob' exercise. It's been provided as a
+// convenience to get you started writing code faster.
+//
+
+export const hey = (message) => {
+   const trimmed = message.trim(); 
+  if(trimmed === ''){
+    return "Fine. Be that way!"
+  }; 
+  const hasLetters = /[A-Za-z]/.test(trimmed); 
+  const isQuestion = trimmed.endsWith('?')
+  const isYelling = hasLetters && trimmed === trimmed.toUpperCase();
+  if (isYelling && isQuestion) {
+    return "Calm down, I know what I'm doing!"
+  }
+   if(isYelling){
+    return "Whoa, chill out!"
+  }
+  if (isQuestion) {
+    return "Sure."
+  }
+ 
+  return "Whatever."
+};
